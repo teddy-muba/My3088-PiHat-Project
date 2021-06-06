@@ -1,0 +1,978 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Micro PiHAT: Status LEDs Schematic"
+Date "2021-06-04"
+Rev "1.0"
+Comp "Individual"
+Comment1 "This Schematic is licensed under MIT Open Source License."
+Comment2 "Author: Teddy Muba"
+Comment3 "SN: TDDMUB001"
+Comment4 ""
+$EndDescr
+$Comp
+L led_status_pcb_design-rescue:Conn_02x20_Odd_Even-Connector_Generic J1
+U 1 1 5C77771F
+P 5250 2950
+F 0 "J1" H 5300 4067 50  0000 C CNN
+F 1 "GPIO_CONNECTOR" H 5300 3976 50  0000 C CNN
+F 2 "lib:PinSocket_2x20_P2.54mm_Vertical_Centered_Anchor" H 5250 2950 50  0001 C CNN
+F 3 "~" H 5250 2950 50  0001 C CNN
+	1    5250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0101
+U 1 1 5C777805
+P 4850 4100
+F 0 "#PWR0101" H 4850 3850 50  0001 C CNN
+F 1 "GND" H 4855 3927 50  0001 C CNN
+F 2 "" H 4850 4100 50  0001 C CNN
+F 3 "" H 4850 4100 50  0001 C CNN
+	1    4850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0102
+U 1 1 5C777838
+P 5750 4100
+F 0 "#PWR0102" H 5750 3850 50  0001 C CNN
+F 1 "GND" H 5755 3927 50  0001 C CNN
+F 2 "" H 5750 4100 50  0001 C CNN
+F 3 "" H 5750 4100 50  0001 C CNN
+	1    5750 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2450 4850 2450
+Wire Wire Line
+	4850 2450 4850 3250
+Wire Wire Line
+	5050 3250 4850 3250
+Connection ~ 4850 3250
+Wire Wire Line
+	4850 3250 4850 3950
+Wire Wire Line
+	5050 3950 4850 3950
+Connection ~ 4850 3950
+Wire Wire Line
+	4850 3950 4850 4100
+Wire Wire Line
+	5550 2250 5750 2250
+Wire Wire Line
+	5750 2250 5750 2650
+Wire Wire Line
+	5550 2650 5750 2650
+Connection ~ 5750 2650
+Wire Wire Line
+	5750 2650 5750 2950
+Wire Wire Line
+	5550 2950 5750 2950
+Connection ~ 5750 2950
+Wire Wire Line
+	5550 3450 5750 3450
+Wire Wire Line
+	5750 2950 5750 3450
+Connection ~ 5750 3450
+Wire Wire Line
+	5750 3450 5750 3650
+Wire Wire Line
+	5550 3650 5750 3650
+Connection ~ 5750 3650
+Wire Wire Line
+	5750 3650 5750 4100
+$Comp
+L led_status_pcb_design-rescue:+3.3V-power #PWR0103
+U 1 1 5C777AB0
+P 4800 1950
+F 0 "#PWR0103" H 4800 1800 50  0001 C CNN
+F 1 "+3.3V" H 4815 2123 50  0000 C CNN
+F 2 "" H 4800 1950 50  0001 C CNN
+F 3 "" H 4800 1950 50  0001 C CNN
+	1    4800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2050 4800 1950
+Wire Wire Line
+	5050 2850 4800 2850
+Wire Wire Line
+	4800 2850 4800 2050
+Connection ~ 4800 2050
+$Comp
+L led_status_pcb_design-rescue:+5V-power #PWR0104
+U 1 1 5C777E01
+P 5850 1950
+F 0 "#PWR0104" H 5850 1800 50  0001 C CNN
+F 1 "+5V" H 5865 2123 50  0000 C CNN
+F 2 "" H 5850 1950 50  0001 C CNN
+F 3 "" H 5850 1950 50  0001 C CNN
+	1    5850 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2050 5850 2050
+Wire Wire Line
+	5850 2050 5850 1950
+Wire Wire Line
+	5550 2150 5850 2150
+Wire Wire Line
+	5850 2150 5850 2050
+Connection ~ 5850 2050
+$Comp
+L led_status_pcb_design-rescue:PWR_FLAG-power #FLG0101
+U 1 1 5C77824A
+P 4400 1950
+F 0 "#FLG0101" H 4400 2025 50  0001 C CNN
+F 1 "PWR_FLAG" H 4400 2124 50  0000 C CNN
+F 2 "" H 4400 1950 50  0001 C CNN
+F 3 "~" H 4400 1950 50  0001 C CNN
+	1    4400 1950
+	1    0    0    -1  
+$EndComp
+Text Notes 6400 2150 0    50   ~ 10
+If back powering Pi with 5V \nNOTE that the Raspberry Pi 3B+ and Pi Zero \nand ZeroW do not include an input ZVD.
+Wire Notes Line
+	6350 1850 6350 2200
+Wire Notes Line
+	6350 2200 8200 2200
+Wire Notes Line
+	8200 2200 8200 1850
+Wire Notes Line
+	8200 1850 6350 1850
+Wire Wire Line
+	4800 2050 5050 2050
+Wire Wire Line
+	4400 2050 4400 1950
+Wire Wire Line
+	4400 2050 4800 2050
+$Comp
+L led_status_pcb_design-rescue:PWR_FLAG-power #FLG0103
+U 1 1 5C77CEFA
+P 6200 1950
+F 0 "#FLG0103" H 6200 2025 50  0001 C CNN
+F 1 "PWR_FLAG" H 6200 2124 50  0000 C CNN
+F 2 "" H 6200 1950 50  0001 C CNN
+F 3 "~" H 6200 1950 50  0001 C CNN
+	1    6200 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2050 6200 2050
+Wire Wire Line
+	6200 1950 6200 2050
+Text Label 4100 2150 0    50   ~ 0
+GPIO2_SDA1
+Text Label 4100 2250 0    50   ~ 0
+GPIO3_SCL1
+Text Label 4100 2350 0    50   ~ 0
+GPIO4_GPIO_GCLK
+Text Label 4100 2550 0    50   ~ 0
+GPIO17_GEN0
+Text Label 4100 2650 0    50   ~ 0
+GPIO27_GEN2
+Text Label 4100 2750 0    50   ~ 0
+GPIO22_GEN3
+Text Label 4100 2950 0    50   ~ 0
+GPIO10_SPI_MOSI
+Wire Wire Line
+	4000 2950 5050 2950
+Wire Wire Line
+	4000 3050 5050 3050
+Wire Wire Line
+	4000 3150 5050 3150
+Wire Wire Line
+	4000 3350 5050 3350
+Wire Wire Line
+	4000 3450 5050 3450
+Wire Wire Line
+	4000 3550 5050 3550
+Wire Wire Line
+	4000 3650 5050 3650
+Wire Wire Line
+	4000 3750 5050 3750
+Wire Wire Line
+	4000 3850 5050 3850
+Wire Wire Line
+	4000 2750 5050 2750
+Wire Wire Line
+	4000 2650 5050 2650
+Wire Wire Line
+	4000 2550 5050 2550
+Wire Wire Line
+	4000 2350 5050 2350
+Wire Wire Line
+	4000 2250 5050 2250
+Wire Wire Line
+	4000 2150 5050 2150
+Text Label 4100 3050 0    50   ~ 0
+GPIO9_SPI_MISO
+Text Label 4100 3150 0    50   ~ 0
+GPIO11_SPI_SCLK
+Text Label 4100 3350 0    50   ~ 0
+ID_SD
+Text Label 4100 3450 0    50   ~ 0
+GPIO5
+Text Label 4100 3550 0    50   ~ 0
+GPIO6
+Text Label 4100 3650 0    50   ~ 0
+GPIO13
+Text Label 4100 3750 0    50   ~ 0
+GPIO19
+Text Label 4100 3850 0    50   ~ 0
+GPIO26
+NoConn ~ 4000 2150
+NoConn ~ 4000 2250
+NoConn ~ 4000 2350
+NoConn ~ 4000 2550
+NoConn ~ 4000 2650
+NoConn ~ 4000 2750
+NoConn ~ 4000 2950
+NoConn ~ 4000 3050
+NoConn ~ 4000 3150
+NoConn ~ 4000 3350
+NoConn ~ 4000 3450
+NoConn ~ 4000 3550
+NoConn ~ 4000 3650
+NoConn ~ 4000 3750
+NoConn ~ 4000 3850
+Text Label 5900 2350 0    50   ~ 0
+GPIO14_TXD0
+Text Label 5900 2450 0    50   ~ 0
+GPIO15_RXD0
+Text Label 5900 2550 0    50   ~ 0
+GPIO18_GEN1
+Text Label 5900 2750 0    50   ~ 0
+GPIO23_GEN4
+Text Label 5900 2850 0    50   ~ 0
+GPIO24_GEN5
+Text Label 5900 3050 0    50   ~ 0
+GPIO25_GEN6
+Text Label 5900 3150 0    50   ~ 0
+GPIO8_SPI_CE0_N
+Text Label 5900 3250 0    50   ~ 0
+GPIO7_SPI_CE1_N
+Wire Wire Line
+	5550 3150 6600 3150
+Wire Wire Line
+	5550 3250 6600 3250
+Text Label 5900 3350 0    50   ~ 0
+ID_SC
+Text Label 5900 3550 0    50   ~ 0
+GPIO12
+Text Label 5900 3750 0    50   ~ 0
+GPIO16
+Text Label 5900 3850 0    50   ~ 0
+GPIO20
+Text Label 5900 3950 0    50   ~ 0
+GPIO21
+Wire Wire Line
+	5550 2350 6600 2350
+Wire Wire Line
+	5550 2450 6600 2450
+Wire Wire Line
+	5550 2550 6600 2550
+Wire Wire Line
+	5550 2750 6600 2750
+Wire Wire Line
+	5550 2850 6600 2850
+Wire Wire Line
+	5550 3050 6600 3050
+Wire Wire Line
+	5550 3350 6600 3350
+Wire Wire Line
+	5550 3550 6600 3550
+Wire Wire Line
+	5550 3750 6600 3750
+Wire Wire Line
+	5550 3850 6600 3850
+NoConn ~ 6600 2350
+NoConn ~ 6600 2450
+NoConn ~ 6600 2550
+NoConn ~ 6600 2750
+NoConn ~ 6600 2850
+NoConn ~ 6600 3050
+NoConn ~ 6600 3150
+NoConn ~ 6600 3250
+NoConn ~ 6600 3350
+NoConn ~ 6600 3550
+NoConn ~ 6600 3750
+NoConn ~ 6600 3850
+NoConn ~ 6600 3950
+Wire Wire Line
+	5550 3950 6600 3950
+$Comp
+L led_status_pcb_design-rescue:MountingHole-Mechanical H1
+U 1 1 5C7C4C81
+P 8250 2600
+F 0 "H1" H 8350 2646 50  0000 L CNN
+F 1 "MountingHole" H 8350 2555 50  0000 L CNN
+F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 8250 2600 50  0001 C CNN
+F 3 "~" H 8250 2600 50  0001 C CNN
+	1    8250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:MountingHole-Mechanical H2
+U 1 1 5C7C7FBC
+P 8250 2800
+F 0 "H2" H 8350 2846 50  0000 L CNN
+F 1 "MountingHole" H 8350 2755 50  0000 L CNN
+F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 8250 2800 50  0001 C CNN
+F 3 "~" H 8250 2800 50  0001 C CNN
+	1    8250 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:MountingHole-Mechanical H3
+U 1 1 5C7C8014
+P 8250 3000
+F 0 "H3" H 8350 3046 50  0000 L CNN
+F 1 "MountingHole" H 8350 2955 50  0000 L CNN
+F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 8250 3000 50  0001 C CNN
+F 3 "~" H 8250 3000 50  0001 C CNN
+	1    8250 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:MountingHole-Mechanical H4
+U 1 1 5C7C8030
+P 8250 3200
+F 0 "H4" H 8350 3246 50  0000 L CNN
+F 1 "MountingHole" H 8350 3155 50  0000 L CNN
+F 2 "lib:MountingHole_2.7mm_M2.5_uHAT_RPi" H 8250 3200 50  0001 C CNN
+F 3 "~" H 8250 3200 50  0001 C CNN
+	1    8250 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L linear:LTC4414 U1
+U 1 1 60BA39DB
+P 1250 6150
+F 0 "U1" H 1250 6750 50  0000 C CNN
+F 1 "LTC4414" H 1250 6850 50  0000 C CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 1250 6150 50  0001 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/4414fc.pdf" H 1250 6150 50  0001 C CNN
+	1    1250 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:CQY99 D4
+U 1 1 60BAACFF
+P 2900 7200
+F 0 "D4" V 2896 7121 50  0000 R CNN
+F 1 "CQY99" V 2805 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 2900 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 2850 7200 50  0001 C CNN
+	1    2900 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D5
+U 1 1 60BBCBF7
+P 3250 7200
+F 0 "D5" V 3246 7121 50  0000 R CNN
+F 1 "CQY99" V 3155 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 3250 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 3200 7200 50  0001 C CNN
+	1    3250 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D6
+U 1 1 60BBDEC0
+P 3600 7200
+F 0 "D6" V 3596 7121 50  0000 R CNN
+F 1 "CQY99" V 3505 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 3600 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 3550 7200 50  0001 C CNN
+	1    3600 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D7
+U 1 1 60BBF443
+P 3950 7200
+F 0 "D7" V 3946 7121 50  0000 R CNN
+F 1 "CQY99" V 3855 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 3950 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 3900 7200 50  0001 C CNN
+	1    3950 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D3
+U 1 1 60BC05A7
+P 2550 7200
+F 0 "D3" V 2546 7121 50  0000 R CNN
+F 1 "CQY99" V 2455 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 2550 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 2500 7200 50  0001 C CNN
+	1    2550 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D8
+U 1 1 60BC18BD
+P 4300 7200
+F 0 "D8" V 4296 7121 50  0000 R CNN
+F 1 "CQY99" V 4205 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 4300 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 4250 7200 50  0001 C CNN
+	1    4300 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D2
+U 1 1 60BC2FB9
+P 2250 7200
+F 0 "D2" V 2246 7121 50  0000 R CNN
+F 1 "CQY99" V 2155 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 2250 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 2200 7200 50  0001 C CNN
+	1    2250 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D9
+U 1 1 60BC8451
+P 4650 7200
+F 0 "D9" V 4646 7121 50  0000 R CNN
+F 1 "CQY99" V 4555 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 4650 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 4600 7200 50  0001 C CNN
+	1    4650 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D10
+U 1 1 60BCAF69
+P 4950 7200
+F 0 "D10" V 4946 7121 50  0000 R CNN
+F 1 "CQY99" V 4855 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 4950 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 4900 7200 50  0001 C CNN
+	1    4950 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED:CQY99 D1
+U 1 1 60BD1719
+P 1950 7200
+F 0 "D1" V 1946 7121 50  0000 R CNN
+F 1 "CQY99" V 1855 7121 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 1950 7375 50  0001 C CNN
+F 3 "https://www.prtice.info/IMG/pdf/CQY99.pdf" H 1900 7200 50  0001 C CNN
+	1    1950 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 60BEF7DF
+P 1950 6750
+F 0 "R1" H 2000 6850 50  0000 L CNN
+F 1 "300" H 2018 6705 50  0000 L CNN
+F 2 "" V 1990 6740 50  0001 C CNN
+F 3 "~" H 1950 6750 50  0001 C CNN
+	1    1950 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 60BF31E3
+P 2250 6750
+F 0 "R2" H 2300 6850 50  0000 L CNN
+F 1 "300" H 2318 6705 50  0000 L CNN
+F 2 "" V 2290 6740 50  0001 C CNN
+F 3 "~" H 2250 6750 50  0001 C CNN
+	1    2250 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 60BF80A1
+P 2550 6750
+F 0 "R3" H 2600 6850 50  0000 L CNN
+F 1 "300" H 2618 6705 50  0000 L CNN
+F 2 "" V 2590 6740 50  0001 C CNN
+F 3 "~" H 2550 6750 50  0001 C CNN
+	1    2550 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 60BF8CC2
+P 2900 6750
+F 0 "R4" H 2950 6850 50  0000 L CNN
+F 1 "300" H 2968 6705 50  0000 L CNN
+F 2 "" V 2940 6740 50  0001 C CNN
+F 3 "~" H 2900 6750 50  0001 C CNN
+	1    2900 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 60BF9CAF
+P 3250 6750
+F 0 "R5" H 3300 6850 50  0000 L CNN
+F 1 "300" H 3318 6705 50  0000 L CNN
+F 2 "" V 3290 6740 50  0001 C CNN
+F 3 "~" H 3250 6750 50  0001 C CNN
+	1    3250 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R6
+U 1 1 60BFA978
+P 3600 6750
+F 0 "R6" H 3650 6850 50  0000 L CNN
+F 1 "300" H 3668 6705 50  0000 L CNN
+F 2 "" V 3640 6740 50  0001 C CNN
+F 3 "~" H 3600 6750 50  0001 C CNN
+	1    3600 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R7
+U 1 1 60BFBD29
+P 3950 6750
+F 0 "R7" H 4000 6850 50  0000 L CNN
+F 1 "300" H 4018 6705 50  0000 L CNN
+F 2 "" V 3990 6740 50  0001 C CNN
+F 3 "~" H 3950 6750 50  0001 C CNN
+	1    3950 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R8
+U 1 1 60BFC93A
+P 4300 6750
+F 0 "R8" H 4350 6850 50  0000 L CNN
+F 1 "300" H 4368 6705 50  0000 L CNN
+F 2 "" V 4340 6740 50  0001 C CNN
+F 3 "~" H 4300 6750 50  0001 C CNN
+	1    4300 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R9
+U 1 1 60BFD683
+P 4650 6750
+F 0 "R9" H 4700 6850 50  0000 L CNN
+F 1 "300" H 4718 6705 50  0000 L CNN
+F 2 "" V 4690 6740 50  0001 C CNN
+F 3 "~" H 4650 6750 50  0001 C CNN
+	1    4650 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R10
+U 1 1 60BFE126
+P 4950 6750
+F 0 "R10" H 5000 6850 50  0000 L CNN
+F 1 "300" H 5018 6705 50  0000 L CNN
+F 2 "" V 4990 6740 50  0001 C CNN
+F 3 "~" H 4950 6750 50  0001 C CNN
+	1    4950 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 6900 1950 7100
+Wire Wire Line
+	2250 6900 2250 7100
+Wire Wire Line
+	2550 6900 2550 7100
+Wire Wire Line
+	2900 6900 2900 7100
+Wire Wire Line
+	3250 6900 3250 7100
+Wire Wire Line
+	3600 6900 3600 7100
+Wire Wire Line
+	3950 6900 3950 7100
+Wire Wire Line
+	4300 6900 4300 7100
+Wire Wire Line
+	4650 6900 4650 7100
+Wire Wire Line
+	4950 6900 4950 7100
+$Comp
+L Device:R_US R11
+U 1 1 60C1F977
+P 3600 5700
+F 0 "R11" H 3668 5746 50  0000 L CNN
+F 1 "55" H 3668 5655 50  0000 L CNN
+F 2 "" V 3640 5690 50  0001 C CNN
+F 3 "~" H 3600 5700 50  0001 C CNN
+	1    3600 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R12
+U 1 1 60C20F21
+P 3600 6100
+F 0 "R12" H 3668 6146 50  0000 L CNN
+F 1 "10" H 3668 6055 50  0000 L CNN
+F 2 "" V 3640 6090 50  0001 C CNN
+F 3 "~" H 3600 6100 50  0001 C CNN
+	1    3600 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R13
+U 1 1 60C21D22
+P 1950 6150
+F 0 "R13" V 1745 6150 50  0000 C CNN
+F 1 "1k" V 1836 6150 50  0000 C CNN
+F 2 "" V 1990 6140 50  0001 C CNN
+F 3 "~" H 1950 6150 50  0001 C CNN
+	1    1950 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R14
+U 1 1 60C22CD2
+P 1750 5750
+F 0 "R14" H 1818 5796 50  0000 L CNN
+F 1 "22k" H 1818 5705 50  0000 L CNN
+F 2 "" V 1790 5740 50  0001 C CNN
+F 3 "~" H 1750 5750 50  0001 C CNN
+	1    1750 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R15
+U 1 1 60C239A1
+P 2550 5750
+F 0 "R15" H 2618 5796 50  0000 L CNN
+F 1 "10k" H 2618 5705 50  0000 L CNN
+F 2 "" V 2590 5740 50  0001 C CNN
+F 3 "~" H 2550 5750 50  0001 C CNN
+	1    2550 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 6150 1750 6150
+$Comp
+L Transistor_BJT:2N3905 Q2
+U 1 1 60BE109A
+P 3250 5350
+F 0 "Q2" H 3441 5304 50  0000 L CNN
+F 1 "2N3905" H 3441 5395 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3450 5275 50  0001 L CIN
+F 3 "https://www.nteinc.com/specs/original/2N3905_06.pdf" H 3250 5350 50  0001 L CNN
+	1    3250 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q1
+U 1 1 60BDE67C
+P 2450 6150
+F 0 "Q1" H 2640 6196 50  0000 L CNN
+F 1 "2N2219" H 2640 6105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-39-3" H 2650 6075 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 2450 6150 50  0001 L CNN
+	1    2450 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 6150 2250 6150
+Wire Wire Line
+	1750 6150 1750 5900
+Connection ~ 1750 6150
+Wire Wire Line
+	1750 6150 1800 6150
+Wire Wire Line
+	2550 5900 2550 5950
+Wire Wire Line
+	3450 5900 2550 5900
+Connection ~ 2550 5900
+Wire Wire Line
+	3450 5350 3450 5900
+Wire Wire Line
+	3150 5550 3600 5550
+Wire Wire Line
+	3600 5850 3600 5900
+Wire Wire Line
+	3600 5900 3900 5900
+Connection ~ 3600 5900
+Wire Wire Line
+	3600 5900 3600 5950
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0106
+U 1 1 60C5ACDE
+P 3600 6250
+F 0 "#PWR0106" H 3600 6000 50  0001 C CNN
+F 1 "GND" H 3605 6077 50  0001 C CNN
+F 2 "" H 3600 6250 50  0001 C CNN
+F 3 "" H 3600 6250 50  0001 C CNN
+	1    3600 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0107
+U 1 1 60C5BC39
+P 2550 6350
+F 0 "#PWR0107" H 2550 6100 50  0001 C CNN
+F 1 "GND" H 2555 6177 50  0001 C CNN
+F 2 "" H 2550 6350 50  0001 C CNN
+F 3 "" H 2550 6350 50  0001 C CNN
+	1    2550 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0108
+U 1 1 60C5EA94
+P 1250 6450
+F 0 "#PWR0108" H 1250 6200 50  0001 C CNN
+F 1 "GND" H 1255 6277 50  0001 C CNN
+F 2 "" H 1250 6450 50  0001 C CNN
+F 3 "" H 1250 6450 50  0001 C CNN
+	1    1250 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0109
+U 1 1 60C67D00
+P 1950 7400
+F 0 "#PWR0109" H 1950 7150 50  0001 C CNN
+F 1 "GND" H 1955 7227 50  0001 C CNN
+F 2 "" H 1950 7400 50  0001 C CNN
+F 3 "" H 1950 7400 50  0001 C CNN
+	1    1950 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0110
+U 1 1 60C68594
+P 2250 7400
+F 0 "#PWR0110" H 2250 7150 50  0001 C CNN
+F 1 "GND" H 2255 7227 50  0001 C CNN
+F 2 "" H 2250 7400 50  0001 C CNN
+F 3 "" H 2250 7400 50  0001 C CNN
+	1    2250 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0111
+U 1 1 60C69CCC
+P 2550 7400
+F 0 "#PWR0111" H 2550 7150 50  0001 C CNN
+F 1 "GND" H 2555 7227 50  0001 C CNN
+F 2 "" H 2550 7400 50  0001 C CNN
+F 3 "" H 2550 7400 50  0001 C CNN
+	1    2550 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0112
+U 1 1 60C6A661
+P 2900 7400
+F 0 "#PWR0112" H 2900 7150 50  0001 C CNN
+F 1 "GND" H 2905 7227 50  0001 C CNN
+F 2 "" H 2900 7400 50  0001 C CNN
+F 3 "" H 2900 7400 50  0001 C CNN
+	1    2900 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0113
+U 1 1 60C6B9DA
+P 3250 7400
+F 0 "#PWR0113" H 3250 7150 50  0001 C CNN
+F 1 "GND" H 3255 7227 50  0001 C CNN
+F 2 "" H 3250 7400 50  0001 C CNN
+F 3 "" H 3250 7400 50  0001 C CNN
+	1    3250 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0114
+U 1 1 60C6C2AE
+P 3600 7400
+F 0 "#PWR0114" H 3600 7150 50  0001 C CNN
+F 1 "GND" H 3605 7227 50  0001 C CNN
+F 2 "" H 3600 7400 50  0001 C CNN
+F 3 "" H 3600 7400 50  0001 C CNN
+	1    3600 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0115
+U 1 1 60C6CB0A
+P 3950 7400
+F 0 "#PWR0115" H 3950 7150 50  0001 C CNN
+F 1 "GND" H 3955 7227 50  0001 C CNN
+F 2 "" H 3950 7400 50  0001 C CNN
+F 3 "" H 3950 7400 50  0001 C CNN
+	1    3950 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0116
+U 1 1 60C6D41F
+P 4300 7400
+F 0 "#PWR0116" H 4300 7150 50  0001 C CNN
+F 1 "GND" H 4305 7227 50  0001 C CNN
+F 2 "" H 4300 7400 50  0001 C CNN
+F 3 "" H 4300 7400 50  0001 C CNN
+	1    4300 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0117
+U 1 1 60C6DCB5
+P 4650 7400
+F 0 "#PWR0117" H 4650 7150 50  0001 C CNN
+F 1 "GND" H 4655 7227 50  0001 C CNN
+F 2 "" H 4650 7400 50  0001 C CNN
+F 3 "" H 4650 7400 50  0001 C CNN
+	1    4650 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0118
+U 1 1 60C6F0F2
+P 4950 7400
+F 0 "#PWR0118" H 4950 7150 50  0001 C CNN
+F 1 "GND" H 4955 7227 50  0001 C CNN
+F 2 "" H 4950 7400 50  0001 C CNN
+F 3 "" H 4950 7400 50  0001 C CNN
+	1    4950 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:PWR_FLAG-power #FLG0102
+U 1 1 5C778511
+P 4450 4150
+F 0 "#FLG0102" H 4450 4225 50  0001 C CNN
+F 1 "PWR_FLAG" H 4450 4324 50  0000 C CNN
+F 2 "" H 4450 4150 50  0001 C CNN
+F 3 "~" H 4450 4150 50  0001 C CNN
+	1    4450 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:GND-power #PWR0105
+U 1 1 5C778504
+P 4450 4200
+F 0 "#PWR0105" H 4450 3950 50  0001 C CNN
+F 1 "GND" H 4455 4027 50  0001 C CNN
+F 2 "" H 4450 4200 50  0001 C CNN
+F 3 "" H 4450 4200 50  0001 C CNN
+	1    4450 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4150 4450 4200
+Wire Notes Line
+	6300 7650 550  7650
+Wire Notes Line
+	550  7650 550  4750
+Wire Notes Line
+	550  4750 6300 4750
+Wire Notes Line
+	6300 4750 6300 7650
+Text Notes 600  4900 0    89   ~ 18
+Sensing Motion & LEDs Configuration
+$Comp
+L led_status_pcb_design-rescue:+5V-power #PWR0119
+U 1 1 60D0E116
+P 1250 5850
+F 0 "#PWR0119" H 1250 5700 50  0001 C CNN
+F 1 "+5V" H 1265 6023 50  0000 C CNN
+F 2 "" H 1250 5850 50  0001 C CNN
+F 3 "" H 1250 5850 50  0001 C CNN
+	1    1250 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:+5V-power #PWR0120
+U 1 1 60D11779
+P 1750 5550
+F 0 "#PWR0120" H 1750 5400 50  0001 C CNN
+F 1 "+5V" H 1765 5723 50  0000 C CNN
+F 2 "" H 1750 5550 50  0001 C CNN
+F 3 "" H 1750 5550 50  0001 C CNN
+	1    1750 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:+5V-power #PWR0121
+U 1 1 60D12E92
+P 2550 5500
+F 0 "#PWR0121" H 2550 5350 50  0001 C CNN
+F 1 "+5V" H 2565 5673 50  0000 C CNN
+F 2 "" H 2550 5500 50  0001 C CNN
+F 3 "" H 2550 5500 50  0001 C CNN
+	1    2550 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L led_status_pcb_design-rescue:+5V-power #PWR0122
+U 1 1 60D13B77
+P 3150 5050
+F 0 "#PWR0122" H 3150 4900 50  0001 C CNN
+F 1 "+5V" H 3165 5223 50  0000 C CNN
+F 2 "" H 3150 5050 50  0001 C CNN
+F 3 "" H 3150 5050 50  0001 C CNN
+	1    3150 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 5550 1750 5600
+Wire Wire Line
+	2550 5500 2550 5600
+Wire Wire Line
+	3150 5050 3150 5150
+Wire Wire Line
+	1950 6600 1950 6500
+Wire Wire Line
+	2250 6600 2250 6500
+Wire Wire Line
+	2550 6600 2550 6500
+Text Label 2550 6500 0    24   ~ 5
+GPIO22_GEN3
+Wire Wire Line
+	2900 6600 2900 6500
+Text Label 2900 6500 0    24   ~ 5
+GPIO5
+Connection ~ 4400 2050
+Wire Wire Line
+	4400 2050 4000 2050
+Text Label 4000 2050 0    50   ~ 0
+3v3Power
+Text Label 3900 5900 0    50   ~ 0
+3v3Power
+Wire Wire Line
+	3250 6600 3250 6500
+Text Label 3250 6500 0    24   ~ 5
+GPIO6
+Wire Wire Line
+	3600 6600 3600 6500
+Text Label 3600 6500 0    24   ~ 5
+GPIO26
+Wire Wire Line
+	3950 6600 3950 6500
+Text Label 3950 6500 0    24   ~ 5
+GPIO23_GEN4
+Wire Wire Line
+	4300 6600 4300 6500
+Text Label 4300 6500 0    24   ~ 5
+GPIO24_GEN5
+Wire Wire Line
+	4650 6600 4650 6500
+Text Label 4650 6500 0    24   ~ 5
+GPIO25_GEN6
+Wire Wire Line
+	4950 6600 4950 6500
+Text Label 2250 6500 0    24   ~ 5
+GPIO27_GEN2
+Text Label 1950 6500 0    24   ~ 5
+GPIO17_GEN0
+Text Label 4950 6500 0    24   ~ 5
+GPIO16
+$EndSCHEMATC
